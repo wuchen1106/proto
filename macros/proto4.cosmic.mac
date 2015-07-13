@@ -7,7 +7,7 @@
 /g4sim/det/ClearGeo
 /g4sim/det/AddGeo World     world_proto                          Simple
 /g4sim/det/AddGeo Proto     sub_proto/subgeo_proto4              CdcProto
-/g4sim/det/AddGeo Proto     sub_trigger/subgeo_trigger           Simple  
+/g4sim/det/AddGeo Proto     sub_trigger/subgeo_trigger3          Simple  
 #/g4sim/det/CDC/SimpleGeometry/material InnerCylinder Vacuum
 
 # Mag:

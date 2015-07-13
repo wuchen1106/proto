@@ -71,7 +71,7 @@ CdcCell_SECTION
 CdcCell_SECTION
 
 CdcCell_FILTERSECTION
-	xt            xt.root         xt
+#	xt            xt.root         xt
 	Switch                        //if commented, then program wil not generate any hit
 	neutralCut                    //if not commented, then neutral tracks will not be recorded
 	tres          2000    ns       //time resolution
@@ -128,5 +128,5 @@ wire_FILTERSECTION
 
 TRIGGERSECTION
 #	minCdcHits         1           # minimum required Cdc nHits. Would be set invalid if minCdcHits = -1
-	minCorM_Hits       1            # minimum required M nHits. Would be set invalid if = -1
+#	minCorM_Hits       1            # minimum required M nHits. Would be set invalid if = -1
 TRIGGERSECTION
