@@ -1,0 +1,33 @@
+	PhysicsList: QGSP_BERT_HP
+
+#General setting  
+	Type:      simple
+	Particle:  e-  #(e+/e-/chargedgeantino/gamma/...)
+#	Particle:  chargedgeantino #(e+/e-/chargedgeantino/gamma/...)
+
+#Default Direction
+#	           Theta    Phi
+#	           deg      deg
+	Direction: 90       -90
+	ThetaSpread:        90
+	PhiSpread:          2
+#Default Kinetic Energy
+#	         MeV
+#	Ekin:    105
+	MomAmp:  1000
+#Default Position     x    y   z
+	Position:         0    310 0
+	PosSpread:        10   0   150
+
+	RandMode:       none #(none/root)
+	EnergyMode:     none #(root/histo/none)
+	PositionMode:   bRand #(uniform/root/none/gRand/bRand/sRand)
+	DirectionMode:  none #(none/uniform/histo)
+	ThetaMode:      uRand #(none/gRand/uRand)
+	PhiMode:        uRand #(none/gRand/uRand)
+	TimeMode:       none #(none/root)
+	pidMode:        none #(none/root)
+
+#Default Time
+#	         ns
+	Time:    0
