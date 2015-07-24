@@ -75,4 +75,4 @@
 #/g4sim/myAnalysisSvc/set_ofile_name output/signal.geantino.vac.cell.root
 #/g4sim/myAnalysisSvc/set_ofile_name output/signal.test.root
 #/g4sim/myAnalysisSvc/set_ofile_name output/tri.HST.mustop.root
-/run/beamOn 5000
+/run/beamOn 10000
