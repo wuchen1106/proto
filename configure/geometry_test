@@ -3,6 +3,6 @@
 
 #ServiceName        ServiceType         FileName
 	World           Simple              world_proto
-#	proto           CdcProto            sub_proto/subgeo_proto4
-#	proto           Simple              sub_trigger/subgeo_trigger4
-	proto           Simple              sub_converter/subgeo_converter
+	proto           CdcProto            sub_proto/subgeo_proto4
+	proto           Simple              sub_trigger/subgeo_trigger3
+#	proto           Simple              sub_converter/subgeo_converter

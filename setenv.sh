@@ -7,7 +7,7 @@ export MAGFIELDCARDROOT=mag/MagField_none
 export OUTCARDROOT=output/output_test
 export GEOCARDROOT=geometry_test
 #export GENFILEROOT=gen/gen_cosmic
-export GENFILEROOT=gen/gen_beamBgam
+export GENFILEROOT=gen/gen_beam
 
 #for directories
 export MACROSROOT=$MYG4SIMWORKROOT/macros
