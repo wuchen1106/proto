@@ -12,7 +12,7 @@
 #
 # Viewer menu :
 /gui/addMenu viewer Viewer
-/gui/addButton viewer "setvis"            "/control/execute {MYG4SIMWORKROOT}/macros/common/setvis.mac"
+/gui/addButton viewer "setvis"            "/control/execute {MYG4SIMWORKROOT}/macros/common/setvis.macro"
 /gui/addButton viewer "Set style surface" "/vis/viewer/set/style surface"
 /gui/addButton viewer "Set style wireframe" "/vis/viewer/set/style wire"
 /gui/addButton viewer "Refresh viewer" "/vis/viewer/refresh"
@@ -23,31 +23,31 @@
 # Run menu :
 /gui/addMenu run Run
 /gui/addButton run "beamOn 1" "/run/beamOn 1"
-/gui/addButton run run                   "/control/execute {MYG4SIMWORKROOT}/macros/run.mac"
-/gui/addButton run grid_ol               "/control/execute {MYG4SIMWORKROOT}/macros/common/grid_ol.mac"
-/gui/addButton run line_ol               "/control/execute {MYG4SIMWORKROOT}/macros/common/line_ol.mac"
+/gui/addButton run run                   "/control/execute {MYG4SIMWORKROOT}/macros/run.macro"
+/gui/addButton run grid_ol               "/control/execute {MYG4SIMWORKROOT}/macros/common/grid_ol.macro"
+/gui/addButton run line_ol               "/control/execute {MYG4SIMWORKROOT}/macros/common/line_ol.macro"
 #
 # ReloadGeo menu :
 /gui/addMenu reGeo ReloadGeo
-/gui/addButton reGeo test                  "/control/execute {MYG4SIMWORKROOT}/macros/test.mac"
-/gui/addButton reGeo 111026                "/control/execute {MYG4SIMWORKROOT}/macros/geom.111026.4v.mac"
-/gui/addButton reGeo 140625                "/control/execute {MYG4SIMWORKROOT}/macros/geom.140625.4v.mac"
-/gui/addButton reGeo 140905                "/control/execute {MYG4SIMWORKROOT}/macros/geom.140905.4v.mac"
-/gui/addButton reGeo 140906                "/control/execute {MYG4SIMWORKROOT}/macros/geom.140906.4v.mac"
-/gui/addButton reGeo 140929                "/control/execute {MYG4SIMWORKROOT}/macros/geom.140929.4v.mac"
-/gui/addButton reGeo 141022                "/control/execute {MYG4SIMWORKROOT}/macros/geom.141022.4v.mac"
-/gui/addButton reGeo 141109                "/control/execute {MYG4SIMWORKROOT}/macros/geom.141109.4v.mac"
+/gui/addButton reGeo test                  "/control/execute {MYG4SIMWORKROOT}/macros/test.macro"
+/gui/addButton reGeo 111026                "/control/execute {MYG4SIMWORKROOT}/macros/geom.111026.4v.macro"
+/gui/addButton reGeo 140625                "/control/execute {MYG4SIMWORKROOT}/macros/geom.140625.4v.macro"
+/gui/addButton reGeo 140905                "/control/execute {MYG4SIMWORKROOT}/macros/geom.140905.4v.macro"
+/gui/addButton reGeo 140906                "/control/execute {MYG4SIMWORKROOT}/macros/geom.140906.4v.macro"
+/gui/addButton reGeo 140929                "/control/execute {MYG4SIMWORKROOT}/macros/geom.140929.4v.macro"
+/gui/addButton reGeo 141022                "/control/execute {MYG4SIMWORKROOT}/macros/geom.141022.4v.macro"
+/gui/addButton reGeo 141109                "/control/execute {MYG4SIMWORKROOT}/macros/geom.141109.4v.macro"
 #
 # ResetMisc menu :
 /gui/addMenu reset ResetMisc
-/gui/addButton reset cdchit                "/control/execute {MYG4SIMWORKROOT}/macros/cdchit.mac"
-/gui/addButton reset coll                  "/control/execute {MYG4SIMWORKROOT}/macros/coll.mac"
-/gui/addButton reset momcali               "/control/execute {MYG4SIMWORKROOT}/macros/momcali.mac"
-/gui/addButton reset g2e                   "/control/execute {MYG4SIMWORKROOT}/macros/g2e..mac"
-/gui/addButton reset n0a9                  "/control/execute {MYG4SIMWORKROOT}/macros/n0a9.mac"
-/gui/addButton reset reflect               "/control/execute {MYG4SIMWORKROOT}/macros/reflect.mac"
-/gui/addButton reset resetVerbose          "/control/execute {MYG4SIMWORKROOT}/macros/resetVerbose.mac"
-/gui/addButton reset resetCut              "/control/execute {MYG4SIMWORKROOT}/macros/resetCut.mac"
+/gui/addButton reset cdchit                "/control/execute {MYG4SIMWORKROOT}/macros/cdchit.macro"
+/gui/addButton reset coll                  "/control/execute {MYG4SIMWORKROOT}/macros/coll.macro"
+/gui/addButton reset momcali               "/control/execute {MYG4SIMWORKROOT}/macros/momcali.macro"
+/gui/addButton reset g2e                   "/control/execute {MYG4SIMWORKROOT}/macros/g2e..macro"
+/gui/addButton reset n0a9                  "/control/execute {MYG4SIMWORKROOT}/macros/n0a9.macro"
+/gui/addButton reset reflect               "/control/execute {MYG4SIMWORKROOT}/macros/reflect.macro"
+/gui/addButton reset resetVerbose          "/control/execute {MYG4SIMWORKROOT}/macros/resetVerbose.macro"
+/gui/addButton reset resetCut              "/control/execute {MYG4SIMWORKROOT}/macros/resetCut.macro"
 #
 # ResetGen menu :
 /gui/addMenu reGen ResetGen

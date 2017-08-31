@@ -7,7 +7,8 @@
 /g4sim/det/ClearGeo
 /g4sim/det/AddGeo World     world_proto                          Simple
 /g4sim/det/AddGeo Proto     sub_proto/subgeo_proto4              CdcProto
-/g4sim/det/AddGeo Proto     sub_trigger/subgeo_trigger3          Simple  
+#/g4sim/det/AddGeo Proto     sub_trigger/subgeo_trigger3          Simple  
+/g4sim/det/AddGeo Proto     sub_trigger/subgeo_triggerFinger     Simple  
 #/g4sim/det/CDC/SimpleGeometry/material InnerCylinder Vacuum
 
 # Mag:
@@ -21,7 +22,7 @@
 /g4sim/det/update
 
 # === choose a misc
-#/control/execute {MYG4SIMWORKROOT}/macros/cdchit.mac
+#/control/execute {MYG4SIMWORKROOT}/macros/cdchit.macro
 
 # === Customize
 
@@ -30,8 +31,8 @@
 #/g4sim/myAnalysisSvc/printModulo	1
 
 #	For cutting
-/control/execute {MYG4SIMWORKROOT}/macros/resetVerbose.mac
-/control/execute {MYG4SIMWORKROOT}/macros/resetCut.mac
+/control/execute {MYG4SIMWORKROOT}/macros/resetVerbose.macro
+/control/execute {MYG4SIMWORKROOT}/macros/resetCut.macro
 #/run/setCut 7 mm
 #/run/setCut 1e9 m
 #/stacking/setEleCut 95 MeV
@@ -55,9 +56,10 @@
 
 #	For generator
 /g4sim/gun/ReadCard gen/gen_beam
+#/g4sim/gun/ReadCard gen/gen_beamFinger
 #/g4sim/gun/ReadCard gen/gen_dio
 #/g4sim/gun/ParticleName e-
-/g4sim/gun/ParticleName e-
+/g4sim/gun/ParticleName mu-
 #/g4sim/gun/ParticleName chargedgeantino
 #/g4sim/gun/defaultPosition 0 0 5790.5 mm # 
 #/g4sim/gun/defaultPosition 0    0   5952.5 mm # position of CDC center 140701
@@ -73,6 +75,6 @@
 #/random/setSeeds 7 90773
 #/g4sim/gun/root_index 702065
 #/g4sim/myAnalysisSvc/set_ofile_name output/signal.geantino.vac.cell.root
-#/g4sim/myAnalysisSvc/set_ofile_name output/signal.test.root
+/g4sim/myAnalysisSvc/set_ofile_name output/signal.105mum.root
 #/g4sim/myAnalysisSvc/set_ofile_name output/tri.HST.mustop.root
 /run/beamOn 10000

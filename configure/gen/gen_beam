@@ -10,14 +10,14 @@
 #	           deg      deg
 	Direction: 90       -90
 	ThetaSpread:        90
-	PhiSpread:          2
+	PhiSpread:          20
 #Default Kinetic Energy
 #	         MeV
-#	Ekin:    105
-	MomAmp:  1000
+	Ekin:    105
+#	MomAmp:  1000
 #Default Position     x    y   z
-	Position:         0    310 0
-	PosSpread:        10   0   150
+	Position:         0    280 0
+	PosSpread:        45   0   150
 
 	RandMode:       none #(none/root)
 	EnergyMode:     none #(root/histo/none)

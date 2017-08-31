@@ -20,7 +20,7 @@
 /g4sim/det/update
 
 # === choose a misc
-#/control/execute {MYG4SIMWORKROOT}/macros/cdchit.mac
+#/control/execute {MYG4SIMWORKROOT}/macros/cdchit.macro
 
 # === Customize
 
@@ -29,8 +29,8 @@
 #/g4sim/myAnalysisSvc/printModulo	1
 
 #	For cutting
-/control/execute {MYG4SIMWORKROOT}/macros/resetVerbose.mac
-/control/execute {MYG4SIMWORKROOT}/macros/resetCut.mac
+/control/execute {MYG4SIMWORKROOT}/macros/resetVerbose.macro
+/control/execute {MYG4SIMWORKROOT}/macros/resetCut.macro
 #/run/setCut 7 mm
 #/run/setCut 1e9 m
 #/stacking/setEleCut 95 MeV
