@@ -51,7 +51,7 @@ TYPE Simple_Materials
 	Titanium    22  47.867     4.506          1
 	Iron        26  56.845     7.874          1
 	Yoke        26  56.845     7.874          1
-	Copper      29  63.546     8.960          1 
+	Copper      29  63.546     8.940          1 
 	Germanium   32  72.630     5.323          1 
 	Strontium   38  87.62      2.64           1 
 	Molybdenum  2   95.96      10.28          1
@@ -100,3 +100,4 @@ TYPE VolMix_Materials
 	GasArgEthane   1         2           Ethane    0.5      Argon  0.5
 	ChamberGas     1         2           Ethane    0.5      Helium 0.5
 	ChamberGas9010 1         2           Isobutane 0.1      Helium 0.9
+	ChamberGas5050 1         2           Ethane    0.5      Helium 0.5
