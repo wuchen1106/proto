@@ -6,17 +6,15 @@
 # Geometry:
 /g4sim/det/ClearGeo
 /g4sim/det/AddGeo World     world_proto                          Simple
-#/g4sim/det/AddGeo Proto     sub_proto/subgeo_proto4              CdcProto
-#/g4sim/det/AddGeo Proto     sub_trigger/subgeo_trigger3          Simple  
-/g4sim/det/AddGeo Proto     sub_trigger/subgeo_triggerGam        Simple  
+/g4sim/det/AddGeo Proto     sub_proto/subgeo_proto4              CdcProto
+/g4sim/det/AddGeo Proto     sub_trigger/subgeo_trigger3          Simple  
 /g4sim/det/AddGeo Proto     sub_converter/subgeo_converter        Simple  
-#/g4sim/det/CDC/SimpleGeometry/material InnerCylinder Vacuum
 
 # Mag:
 /g4sim/mag/Reset
 #/g4sim/mag/ReadCard         mag/MagField_none
 #/g4sim/mag/ReadCard         mag/MagField_uniform
-/g4sim/mag/AddMap           dipole.root    -0.35
+/g4sim/mag/AddMap           dipole.root 0.7 0 -3300 1000
 /g4sim/det/update
 
 # === choose a misc
@@ -29,8 +27,8 @@
 #/g4sim/myAnalysisSvc/printModulo	1
 
 #	For cutting
-/control/execute {MYG4SIMWORKROOT}/macros/resetVerbose.macro
-/control/execute {MYG4SIMWORKROOT}/macros/resetCut.macro
+/control/execute {MYG4SIMWORKROOT}/macros/common/resetVerbose.macro
+/control/execute {MYG4SIMWORKROOT}/macros/common/resetCut.macro
 #/run/setCut 7 mm
 #/run/setCut 1e9 m
 #/stacking/setEleCut 95 MeV
@@ -53,7 +51,7 @@
 #/stacking/set_no_sec 1
 
 #	For generator
-/g4sim/gun/ReadCard gen/gen_beamBgam
+/g4sim/gun/ReadCard gen/gen_beamGam
 #/g4sim/gun/ReadCard gen/gen_dio
 #/g4sim/gun/ParticleName e-
 #/g4sim/gun/ParticleName e-
@@ -66,7 +64,7 @@
 /g4sim/gun/initialize
 
 # Output:
-/g4sim/myAnalysisSvc/set_out_card output/output_gam
+/g4sim/myAnalysisSvc/set_out_card output/output_test
 
 #	===	a run
 #/random/setSeeds 7 90773

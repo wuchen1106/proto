@@ -1,7 +1,8 @@
 #general info
 	checkoverlap
 
-DEFINE:		thCon		0.5
+#DEFINE:		thCon		0.5
+DEFINE:		thCon		3.5
 DEFINE:		LCon		200
 DEFINE:		wCon		200
 #Box info
@@ -9,7 +10,7 @@ DEFINE:		wCon		200
 #	     mm      mm      mm                                                          mm     mm     mm     deg  deg    deg
 #	                                                                               P R      Phi    Z
 #	                                                                               S R      Phi    Theta  
-	B    thCon    wCon   LCon   Convertor 1     World     Lead         M/MonitorSD   1000  0      0      0    0      0
+	B    wCon    thCon   LCon   Convertor 1     World     Lead         M/MonitorSD   0      3700   -1000  0    0      0
 
 #visual settings
 	VerboseLevel:    5
