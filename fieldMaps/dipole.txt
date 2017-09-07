@@ -1,0 +1,13 @@
+TTREE param
+maxline/I current gradient normB normE type/C nX/I nY/I nZ/I dX dY dZ X0 Y0 Z0 extendX/B extendXbits/I extendY/B extendYbits/I extendZ/B extendZbits/I
+128 1 1 1 1 grid 2 2 2 550 600 1350 -275 -300 -675 0 0 0 0 0 0
+TTREE data
+X/F Y/F Z/F Bx/F By/F Bz/F
+-275  300 -675 1 0 0
+ 275  300 -675 1 0 0
+ 275  300  675 1 0 0
+-275  300  675 1 0 0
+-275 -300 -675 1 0 0
+ 275 -300 -675 1 0 0
+ 275 -300  675 1 0 0
+-275 -300  675 1 0 0
