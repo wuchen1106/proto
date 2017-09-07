@@ -1,0 +1,127 @@
+#general info
+#	checkoverlap
+#	LayerMaterial:             ChamberGas9010
+	LayerMaterial:             ChamberGas
+	MotherLogicalVolume:       CDCContainer
+#	SensitiveDetector:         CdcSimpleSD
+	SensitiveDetector:         CdcSD
+#	SensitiveDetector:         C/MonitorSD
+	SDVolumeName:              CdcCell
+#	SDVolumeName:              CDCContainer
+#	DigitizeModule:            CdcDigitizer
+#	DigitizeModule:            none
+	MaxStepLength:             150
+
+#wire info
+	SignalWireMaterial:        Tungsten
+	FieldWireMaterial:         Aluminium
+	SignalWireRadius:          12.5 #micrometer
+	FieldWireRadius:           63   #micrometer
+#	SignalWireRadius:          500 #micrometer
+#	FieldWireRadius:           1000 #micrometer
+
+#layer info
+#	T	Iw	Ic	R		L		    	Nh		skip	first phi0
+#				cm		cm                                    degree
+	G	1	0	51.4000	147.6046    	396		12	 	1     95
+	F	2	1	52.2000	147.8866919   	396		-12		0     95
+	S	3	1	53.0000	148.1688151   	396		-12		0     95
+	F	4	2	53.8000	148.4509383   	408		12	 	0     95
+	S	5	2	54.6000	148.7330614   	408		12	 	0     95
+	F	6	3	55.4000	149.0151846   	420		-12		1     95
+	S	7	3	56.2000	149.2973078   	420		-12		1     95
+	F	8	4	57.0000	149.579431    	432		12	 	0     95
+	S	9	4	57.8000	149.8615541   	432		12	 	0     95
+	F	10	5	58.6000	150.1436773   	444		-12		1     95
+	S	11	5	59.4000	150.4258005   	444		-12		1     95
+	F	12	6	60.2000	150.7079236   	456		12	 	1     95
+	S	13	6	61.0000	150.9900468   	456		12	 	1     95
+	F	14	7	61.8000	151.27217     	468		-12		0     95
+	S	15	7	62.6000	151.5542931   	468		-12		0     95
+	F	16	8	63.4000	151.8364163   	480		12	 	1     95
+	S	17	8	64.2000	152.1185395   	480		12	 	0     95
+	F	18	9	65.0000	152.4006626   	492		-12		1     95
+	S	19	9	65.8000	152.6827858   	492		-12		1     95
+	F	20	10	66.6000	152.964909    	504		12	 	0     95
+	S	21	10	67.4000	153.2470322   	504		12	 	0     95
+	F	22	11	68.2000	153.5291553   	516		-12		1     95
+	S	23	11	69.0000	153.8112785   	516		-12		1     95
+	F	24	12	69.8000	154.0934017   	528		12	 	0     95
+	S	25	12	70.6000	154.3755248   	528		12	 	0     95
+	F	26	13	71.4000	154.657648    	540		-12		1     95
+	S	27	13	72.2000	154.9397712   	540		-12		1     95
+	F	28	14	73.0000	155.2218943   	552		12	 	0     95
+	S	29	14	73.8000	155.5040175   	552		12	 	0     95
+	F	30	15	74.6000	155.7861407   	564		-14		0     95
+	S	31	15	75.4000	156.0682638   	564		-14		0     95
+	F	32	16	76.2000	156.350387    	576		14	 	0     95
+	S	33	16	77.0000	156.6325102   	576		14	 	0     95
+	F	34	17	77.8000	156.9146334   	588		-14		1     95
+	S	35	17	78.6000	157.1967565   	588		-14		1     95
+	F	36	18	79.4000	157.4788797   	600		14	 	0     95
+	S	37	18	80.2000	157.7610029   	600		14	 	0     95
+	F	38	19	81.0000	158.043126    	612		-14		1     95
+	G	39	19	81.8000	158.3252      	612		-14		1     95
+
+DEFINE:		LCDC			1476.046
+DEFINE:		LCDCO			1583.252
+DEFINE:		RCDCO			826
+DEFINE:		RCDCI			500
+DEFINE:		thIW            0.5
+DEFINE:		Dist			20
+DEFINE:		thEP			10
+DEFINE:		thOW			5
+DEFINE:		CDCEleSup_TH	5
+DEFINE:		CDCEleSupO1_L	250
+DEFINE:		CDCDeltaL		(LCDCO-LCDC)/2.
+
+#Box info
+#	Type x       y       z      Name      RepNo MotVolume Material     SDName        posX   posY   posZ   Ephi Etheta Epsi
+#	     mm      mm      mm                                                          mm     mm     mm     deg  deg    deg
+#	                                                                               P R      Phi    Z
+#	                                                                               S R      Phi    Theta  
+DEFINE:		LCDCC		LCDCO+2*thEP+CDCEleSupO1_L
+DEFINE:		RCDCOO		RCDCO+thOW
+DEFINE:		Z			pZCDC+CDCEleSupO1_L/2.
+DEFINE:		wProto      274 
+DEFINE:		hProto      170.05
+DEFINE:		lProto      648.37
+DEFINE:		wWall       10  
+	B    wProto  hProto  lProto CDCContOuter 1  World     ChamberGas    none         0      0      0      0     0     0
+	B    wProto-wWall*2  hProto-wWall*2  lProto-wWall*2 CDCContainer 1  CDCContOuter ChamberGas none         0      0      0      0     0     0
+	B    wWall   hProto  lProto CDCWallSP
+	B    wProto  wWall   lProto CDCWallTP
+DEFINE:		wHoleT      wProto-30*2
+DEFINE:		lHoleT      lProto-40*2
+DEFINE:		hHoleS      92
+DEFINE:		lHoleS      380
+DEFINE:		wWindow     0.2
+DEFINE:		pX			(x-0.5)*(wProto-wWall)
+	B    wWindow hHoleS  lHoleS CDCWindowS   2  CDCContOuter Mylar      none         pX     0      0      0     0     0
+DEFINE:		pY			(x-0.5)*(hProto-wWall)
+	B    wHoleT  wWindow lHoleT CDCWindowT   2  CDCContOuter Mylar      none         0      pY     0      0     0     0
+	B    wWall+1 hHoleS  lHoleS CDCWallSH
+	B    wHoleT  wWall+1 lHoleT CDCWallTH
+DEFINE:		pZ			(x-0.5)*(lProto-wWall)
+	B    wProto  hProto  wWall  CDCWallE     2  CDCContOuter Aluminium  none         0      0      pZ     0     0     0
+#BooleanSolid info
+#	Type type  vol1        vol2        Ephi Ethe Epsi PosX  PosY PosZ   name     RepNo MotVolume    Material   SDName         posX posY posZ   Ephi Ethe Epsi  
+#	                                   deg  deg  deg  mm    mm   mm                                                           mm   mm   mm     deg  deg  deg   
+#	                                                P R     Phi  Z                                                          P R    Phi  Z    
+#	                                                S R     Phi  Theta                                                      S R    Phi  Theta
+	BL   minus CDCWallSP   CDCWallSH   0    0    0    0     0    0      CDCWallS 2     CDCContOuter Aluminium  T2/MonitorSD   pX   0    0      0    0    0                  
+	BL   minus CDCWallTP   CDCWallTH   0    0    0    0     0    0      CDCWallT 2     CDCContOuter Aluminium  T2/MonitorSD   0    pY   0      0    0    0                  
+
+#visual settings
+	VerboseLevel:    5
+  VISSETTING  #Keep this line to call Reset
+#	Name                 red green blue
+#	vis_CDCContainer     0      1      1     0.1
+	vis_CDCWallE         0      0  	   1  
+	vis_CDCWallS         0      0  	   1  
+	vis_CDCWallT         0      0  	   1  
+	vis_CDCWindowS       0.6    0.6	   0.2   0.3
+	vis_CDCWindowT       0.6    0.6	   0.2   0.3
+#	vis_layer            0      1      0     0.3
+	vis_SignalWire       1      0      0
+	vis_FieldWire        0      0      1
